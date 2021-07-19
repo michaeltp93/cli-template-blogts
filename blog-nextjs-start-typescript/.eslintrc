@@ -1,0 +1,64 @@
+{
+    "extends": [
+        "airbnb",
+        "airbnb/hooks",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/recommended",
+        "plugin:import/typescript",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended",
+        "plugin:sonarjs/recommended",
+        "prettier",
+        "next",
+        "next/core-web-vitals",
+        "plugin:@next/next/recommended"
+    ],
+    "plugins": [
+        "@next/next",
+        "@typescript-eslint",
+        "import",
+        "prettier",
+        "react",
+        "react-hooks",
+        "simple-import-sort",
+        "sonarjs"
+    ],
+    "rules": {
+        "@next/next/no-img-element": "off",
+        "@typescript-eslint/consistent-type-imports": ["error", { "prefer": "type-imports" }],
+        "@typescript-eslint/no-unused-vars": [
+            "error",
+            {
+                "argsIgnorePattern": "^_",
+                "ignoreRestSiblings": true
+            }
+        ],
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "import/no-cycle": "off",
+        "import/prefer-default-export": "off",
+        "jsx-a11y/click-events-have-key-events": "off",
+        "jsx-a11y/no-noninteractive-element-interactions": "off",
+        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+        "react/jsx-props-no-spreading": "off",
+        "react/require-default-props": "off",
+        "simple-import-sort/exports": "error",
+        "simple-import-sort/imports": "error",
+        "sonarjs/cognitive-complexity": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {
+                "project": "tsconfig.json"
+            }
+        }
+    }
+}
